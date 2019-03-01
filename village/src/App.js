@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import { Route } from 'react-router-dom'
 
 import './App.css';
 import SmurfForm from './components/SmurfForm';
@@ -35,8 +36,11 @@ addToState = newList => {
   render() {
     return (
       <div className="App">
-        <SmurfForm addToState={this.addToState} />
-        <Smurfs smurfs={this.state.smurfs} />
+        {/* <SmurfForm addToState={this.addToState} /> */}
+        <Route exact path='/smurf-form/' render={() => <SmurfForm addToState={this.addToState} />} />
+
+        {/* <Smurfs smurfs={this.state.smurfs} /> */}
+        <Route path='/' render={() => <Smurfs smurfs={this.state.smurfs} />} />
       </div>
     );
   }
