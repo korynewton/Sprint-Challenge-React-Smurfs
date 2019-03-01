@@ -38,8 +38,8 @@ addToState = newList => {
       <div className="App">
         {/* <SmurfForm addToState={this.addToState} /> */}
         <div className="nav">
-          <NavLink to="/">See the Village</NavLink>
-          <NavLink to="/smurf-form">Add a smurf</NavLink>
+          <NavLink exact to="/">See the Village</NavLink>
+          <NavLink exact to="/smurf-form">Add a smurf</NavLink>
         </div>
         <Route exact path='/smurf-form/' render={() => <SmurfForm addToState={this.addToState} />} />
 

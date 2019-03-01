@@ -3,3 +3,18 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+  font-weight: 700;
+}
+
+.nav a.active {
+ color: #224de3;
+ text-decoration: underline;
+}
+
