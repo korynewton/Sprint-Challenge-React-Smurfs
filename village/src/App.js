@@ -23,13 +23,19 @@ componentDidMount() {
       })
     })
     .catch(err => {console.log(err)})
+}
 
+
+addToState = newList => {
+  this.setState({
+    smurfs : newList
+  })
 }
 
   render() {
     return (
       <div className="App">
-        <SmurfForm />
+        <SmurfForm addToState={this.addToState} />
         <Smurfs smurfs={this.state.smurfs} />
       </div>
     );
